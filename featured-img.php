@@ -9,8 +9,8 @@ function custom_postimage_setup(){
 function custom_postimage_meta_box(){
 
     //on which post types should the box appear?
-    //$post_types = array('post');
-    $post_types = array('news_eve');
+    $post_types = array('post');
+    //$post_types = array('your custom post type');
     foreach($post_types as $pt){
         add_meta_box('custom_postimage_meta_box',__( 'Detail Images', 'yourdomain'),'custom_postimage_meta_box_func',$pt,'side','low');
     }
