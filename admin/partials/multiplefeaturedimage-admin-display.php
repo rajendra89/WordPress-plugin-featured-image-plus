@@ -14,3 +14,77 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
+
+
+<?php
+/**
+*
+* admin/partials/wp-cbf-admin-display.php - Don't add this comment
+*
+**/
+?>
+
+<!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<div class="wrap">
+
+    <h2><?php echo esc_html(get_admin_page_title()); ?></h2>
+
+    <form method="post" name="cleanup_options" action="options.php">
+
+        <!-- remove some meta and generators from the <head> -->
+        <fieldset>
+            <legend class="screen-reader-text"><span>Clean WordPress head section</span></legend>
+            <label for="<?php echo $this->plugin_name; ?>-cleanup">
+                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-cleanup" name="<?php echo $this->plugin_name; ?> [cleanup]" value="1"/>
+                <span><?php esc_attr_e('Clean up the head section', $this->plugin_name); ?></span>
+            </label>
+        </fieldset>
+
+        <!-- remove injected CSS from comments widgets -->
+        <fieldset>
+            <legend class="screen-reader-text"><span>Remove Injected CSS for comment widget</span></legend>
+            <label for="<?php echo $this->plugin_name; ?>-comments_css_cleanup">
+                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-comments_css_cleanup" name="<?php echo $this->plugin_name; ?>[comments_css_cleanup]" value="1"/>
+                <span><?php esc_attr_e('Remove Injected CSS for comment widget', $this->plugin_name); ?></span>
+            </label>
+        </fieldset>
+
+        <!-- remove injected CSS from gallery -->
+        <fieldset>
+            <legend class="screen-reader-text"><span>Remove Injected CSS for galleries</span></legend>
+            <label for="<?php echo $this->plugin_name; ?>-gallery_css_cleanup">
+                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-gallery_css_cleanup" name="<?php echo $this->plugin_name; ?>[gallery_css_cleanup]" value="1" />
+                <span><?php esc_attr_e('Remove Injected CSS for galleries', $this->plugin_name); ?></span>
+            </label>
+        </fieldset>
+
+        <!-- add post,page or product slug class to body class -->
+        <fieldset>
+            <legend class="screen-reader-text"><span><?php _e('Add Post, page or product slug to body class', $this->plugin_name); ?></span></legend>
+            <label for="<?php echo $this->plugin_name; ?>-body_class_slug">
+                <input type="checkbox" id="<?php echo $this->plugin_name;?>-body_class_slug" name="<?php echo $this->plugin_name; ?>[body_class_slug]" value="1" />
+                <span><?php esc_attr_e('Add Post slug to body class', $this->plugin_name); ?></span>
+            </label>
+        </fieldset>
+
+        <!-- load jQuery from CDN -->
+        <fieldset>
+            <legend class="screen-reader-text"><span><?php _e('Load jQuery from CDN instead of the basic wordpress script', $this->plugin_name); ?></span></legend>
+            <label for="<?php echo $this->plugin_name; ?>-jquery_cdn">
+                <input type="checkbox" id="<?php echo $this->plugin_name; ?>-jquery_cdn" name="<?php echo $this->plugin_name; ?>[jquery_cdn]" value="1" />
+                <span><?php esc_attr_e('Load jQuery from CDN', $this->plugin_name); ?></span>
+            </label>
+                    <fieldset>
+                        <p>
+                        	You can choose your own custom post type 
+                        </p>
+                        <legend class="screen-reader-text"><span><?php _e('Choose your prefered cdn provider', $this->plugin_name); ?></span></legend>
+                        <input type="url" class="regular-text" id="<?php echo $this->plugin_name; ?>-cdn_provider" name="<?php echo $this->plugin_name; ?>[cdn_provider]" value=""/>
+                    </fieldset>
+        </fieldset>
+
+        <?php submit_button('Save changes', 'primary','submit', TRUE); ?>
+
+    </form>
+
+</div>

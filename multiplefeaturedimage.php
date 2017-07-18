@@ -13,9 +13,9 @@
  * @package           Multiplefeaturedimage
  *
  * @wordpress-plugin
- * Plugin Name:       featured-image-plus
+ * Plugin Name:       Featured-Image-plus
  * Plugin URI:        http://wordpress.org/plugins
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       This plugin will help admin to add extra featured image on post, page or even custom post type.
  * Version:           1.0.0
  * Author:            rajendra89
  * Author URI:        http://rajendrarijal.com.np/
