@@ -87,4 +87,35 @@
 
     </form>
 
+
+    <!-- Featured Image Plus -->
+    <h2><?php esc_attr_e( 'Featured Image Plus: Fieldset and Input Field', 'WpAdminStyle' ); ?></h2>
+    <form action="options.php" method="post">
+
+    <fieldset>
+        <legend class="screen-reader-text"><span>Fieldset Example</span></legend>
+        <label for="<?php echo $this->plugin_name; ?>">
+            <input name="" type="checkbox" id="<?php echo $this->plugin_name; ?>" value="1" />
+            <span><?php esc_attr_e( 'Check to enable additional featured image on Post', 'WpAdminStyle' ); ?></span>
+        </label> <br>
+
+        <label for="<?php echo $this->plugin_name; ?>">
+        <input name="" type="checkbox" id="users_can_register2" value="1" />
+        <span><?php esc_attr_e( 'Check to enable additional featured image on Pages', 'WpAdminStyle' ); ?></span>
+        </label> <br>
+
+        <fieldset>
+                    <p>
+                        You can choose your own custom post type 
+                    </p>        
+        <input type="text" value=".regular-text" class="regular-text" />
+        <span><?php esc_attr_e( 'Type CPT (custom post type) on enable additional featured image', 'WpAdminStyle' ); ?></span>
+        
+        </fieldset>
+    </fieldset>
+    <fieldset>
+
+    <?php submit_button('Save changes', 'primary','submit', TRUE); ?>
+    </form>
+
 </div>
