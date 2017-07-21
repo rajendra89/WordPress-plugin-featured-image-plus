@@ -95,12 +95,12 @@
     <fieldset>
         <legend class="screen-reader-text"><span>Fieldset Example</span></legend>
         <label for="<?php echo $this->plugin_name; ?>">
-            <input name="" type="checkbox" id="<?php echo $this->plugin_name; ?>" value="1" />
+            <input name="<?php echo $this->plugin_name;?>-post" type="checkbox" id=" <?php echo $this->plugin_name;?>-post" value="1" />
             <span><?php esc_attr_e( 'Check to enable additional featured image on Post', 'WpAdminStyle' ); ?></span>
         </label> <br>
 
         <label for="<?php echo $this->plugin_name; ?>">
-        <input name="" type="checkbox" id="users_can_register2" value="1" />
+        <input name="<?php echo $this->plugin_name;?>-page" type="checkbox" id=" <?php echo $this->plugin_name;?>-page" value="1" />
         <span><?php esc_attr_e( 'Check to enable additional featured image on Pages', 'WpAdminStyle' ); ?></span>
         </label> <br>
 
@@ -108,7 +108,7 @@
                     <p>
                         You can choose your own custom post type 
                     </p>        
-        <input type="text" value=".regular-text" class="regular-text" />
+        <input type="text" value="1" id=" <?php echo $this->plugin_name;?>-cpt" name=" <?php echo $this->plugin_name;?>-cpt" />
         <span><?php esc_attr_e( 'Type CPT (custom post type) on enable additional featured image', 'WpAdminStyle' ); ?></span>
         
         </fieldset>
